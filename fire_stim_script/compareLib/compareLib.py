@@ -29,11 +29,11 @@ def compare_internal_power(lib1, lib2):
         for i in range(start_rise, row):
             sheet.write('B' + str(i), condition) 
         
-        start_fall = row 
+        start_fall = row
         condition = 'internal_power ' + str(when) if when != None else '' +' fall_power'
         compare_array(inter1.get_group('fall_power'), inter2.get_group('fall_power'), 'internal_power', 'values')
-        for i in range(start_fall, row):       
-            sheet.write('B' + str(i), condition) 
+        for i in range(start_fall, row):
+            sheet.write('B' + str(i), condition)
             
             
 def compare_template(lib_content1, lib_content2, temp):
